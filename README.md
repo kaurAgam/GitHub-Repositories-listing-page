@@ -28,6 +28,7 @@ Clone the repository to your local machine and open the `index.html` file in a w
 ![GitHub Profile Viewer](3.png)
 ![GitHub Profile Viewer](4.png)
 ![GitHub Profile Viewer](5.png)
+![GitHub Profile Viewer](6.png)
 
 ## Customization
 
