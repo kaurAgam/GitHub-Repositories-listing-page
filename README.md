@@ -33,10 +33,3 @@ Clone the repository to your local machine and open the `index.html` file in a w
 
 You can customize the appearance and styles by modifying the CSS file (`css/styles.css`). Feel free to make adjustments to match your preferences.
 
-## Contributing
-
-Contributions are welcome! If you have any suggestions, bug reports, or enhancements, please create an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
