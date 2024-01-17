@@ -34,3 +34,6 @@ Clone the repository to your local machine and open the `index.html` file in a w
 
 You can customize the appearance and styles by modifying the CSS file (`css/styles.css`). Feel free to make adjustments to match your preferences.
 
+## Hosting
+
+This application has been hosted and is accessible at [GitHubRepoLister](https://githubrepolister.netlify.app/). Visit the link to use the application online.
