@@ -41,15 +41,24 @@
             </div>
         </div>
     </div>
+
     
 
-
+    <div class="pagination">
+        <button onclick="paginate('first')">First</button>
+        <button onclick="paginate('prev')"><< Back</button>
+        <span id="page-info"></span>
+        <button onclick="paginate('next')">Next >></button>
+        <button onclick="paginate('last')">Last</button>
+    </div>
   
     <div id="repo-box"></div>
+    
 
 
     <script>
             document.getElementById("back").style.display = "none";
+            
             function getusername() {
         var user = document.getElementById("user").value;
         
@@ -79,7 +88,6 @@
                 document.getElementById("title").style.display = "none";
                 document.getElementById("repo-box").style.display = "block";
                 document.getElementById("back").style.display = "block";
-
                 genRepo(user);
             })
             }
