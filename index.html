@@ -41,10 +41,16 @@
             </div>
         </div>
     </div>
+  
 
-    
+    <div id="numofpages">
+        <label for="reposPerPage">repos/page:  </label>
+        <input type="number" id="reposPerPage" min="1" max="100" value="10">
+        <button onclick="updateReposPerPage()">Apply</button>    
+    </div>
 
     <div class="pagination">
+
         <button onclick="paginate('first')">First</button>
         <button onclick="paginate('prev')"><< Back</button>
         <span id="page-info"></span>
@@ -58,6 +64,7 @@
 
     <script>
             document.getElementById("back").style.display = "none";
+            document.getElementById("numofpages").style.display = "none";
             
             function getusername() {
         var user = document.getElementById("user").value;
@@ -87,6 +94,7 @@
 
                 document.getElementById("title").style.display = "none";
                 document.getElementById("repo-box").style.display = "block";
+                document.getElementById("numofpages").style.display = "block";
                 document.getElementById("back").style.display = "block";
                 genRepo(user);
             })
