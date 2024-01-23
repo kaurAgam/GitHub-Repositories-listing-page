@@ -104,7 +104,7 @@ body {
 }
 
 .language, .star, .fork {
-    font-size: 1.5vh;
+    font-size: max(12px,1.5vh);
     display:inline-block;
     margin-right: 20px;
     color: #fff;
@@ -140,7 +140,7 @@ a:hover {
 
 img{
     width:max(200px,10vw);
-    border-radius: 50%;
+    border-radius: 5%;
 }
 
 .profile-info {
@@ -175,7 +175,27 @@ img{
     display: inline-block;
 }
 
+#numofpages {
+    text-align: center;
+    margin-top: 20px;;
+}
+#numofpages button{
+    background-color: #424242;
+    color: #fff;
+    border: none;
+    padding: 4px 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#numofpages button:hover{
+    background-color: #6c6969;
+    transition: ease-in-out 0.2s;
 
+}
+#numofpages input{
+    width: 40px;
+}
 .pagination {
     text-align: center;
     margin-top: 20px;
@@ -185,7 +205,7 @@ img{
     background-color: #424242;
     color: #fff;
     border: none;
-    padding: 10px 15px;
+    padding: 7px 10px;
     margin: 0 5px;
     cursor: pointer;
     border-radius: 4px;
