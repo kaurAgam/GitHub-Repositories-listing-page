@@ -1,3 +1,4 @@
+
 var currentPage = 1;
 var reposPerPage = 10;
 var totalRepos = 0;
@@ -32,11 +33,18 @@ function genRepo(user, page) {
         $.get(requestURL)
             .done(function (repos) {
                 if (!Array.isArray(repos) || !repos.length) {
-                    window.location.href = "index.html";
-                    alert("Sorry, the GitHub username appears to be invalid.");
+                    // No public repositories
+                    $(".pagination").html(" ");
+                    $("#numofpages").html(" ");
+                    $("#repo-box").html("<p style='text-align: center; margin-top:10px;'>No public repositories available.</p>");
                 } else {
+                    // Display the repositories
                     displayRepos(repos);
                 }
+            })
+            .fail(function () {
+                window.location.href = "index.html";
+                alert("Sorry, the GitHub username appears to be invalid.");
             });
     }
 }
@@ -74,7 +82,6 @@ function paginate(direction) {
     genRepo(user, currentPage);
 }
 
-
 function displayRepos(repos) {
     $("#repo-box").empty();
 
@@ -104,6 +111,22 @@ function displayRepos(repos) {
             "</div></div></div>");
     }
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     togglePaginationButtons(false);
 });
+
+
+function updateReposPerPage() {
+    var newReposPerPage = parseInt($("#reposPerPage").val());
+
+    if (isNaN(newReposPerPage) || newReposPerPage < 1 || newReposPerPage > 100) {
+        alert("Please enter a valid number between 1 and 100.");
+        return;
+    }
+
+    reposPerPage = newReposPerPage;
+    var user = document.getElementById("user").value;
+    genRepo(user, currentPage);
+}
+
