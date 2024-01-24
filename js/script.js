@@ -127,6 +127,7 @@ function updateReposPerPage() {
 
     reposPerPage = newReposPerPage;
     var user = document.getElementById("user").value;
+    currentPage=1;
     genRepo(user, currentPage);
 }
 
